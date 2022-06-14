@@ -1,0 +1,40 @@
+.card {
+    cursor: pointer;
+    user-select: none;
+    margin: 20px;
+    padding-bottom: 10px;
+    background: #222;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 130px;
+    height: 230px;
+    font-size: 12px;
+    transition: transform 50ms ease-in-out;
+    transform: scale(1);
+}
+.card:hover {
+    transform: scale(1.05)
+}
+.card > * {
+    pointer-events: none;
+}
+
+.imgContainer {
+    width: inherit;
+    overflow: hidden;
+
+}
+
+.imgContainer > img {
+    width: inherit;
+    
+}
+
+.card > p {
+
+    font-weight: bold;
+    font-size: 14px;
+}

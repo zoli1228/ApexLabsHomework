@@ -1,0 +1,43 @@
+.Search {
+    margin: 0 5px;
+    height: 30px;
+    line-height: 20px;
+    display: inline-block;
+    background: #222;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    text-indent: 25px;
+    color: white;
+    min-width: 50px;
+    max-width: 200px;
+    width: 15rem;
+}
+
+.clearSearchBtn {
+    transition: background-color 100ms ease-in-out;
+    cursor: pointer;
+    margin: 0 5px;
+    height: 30px;
+    display: inline-block;
+    background: #222;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    min-width: 50px;
+    max-width: 200px;
+    width: 10rem;
+}
+
+.clearSearchBtn:hover {
+    background: #333;
+}
+
+.searchBar {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    justify-content: right;
+    align-items: center;
+}

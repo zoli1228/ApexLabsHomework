@@ -1,0 +1,51 @@
+Result from IMDB:
+
+actorList: (51) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
+awards: ""
+boxOffice: {budget: '', openingWeekendUSA: '$560,678', grossUSA: '$1,035,265', cumulativeWorldwideGross: '$2,122,288'}
+companies: "30WEST, Icon Films"
+companyList: (2) [{…}, {…}]
+contentRating: "R"
+countries: "USA"
+countryList: [{…}]
+directorList: [{…}]
+directors: "Tarik Saleh"
+errorMessage: null
+fullCast: null
+fullTitle: "The Contractor (2022)"
+genreList: (2) [{…}, {…}]
+genres: "Action, Thriller"
+id: "tt10323676"
+imDbRating: "5.8"
+imDbRatingVotes: "13340"
+image: "https://imdb-api.com/images/original/MV5BOWQ3MDg1MTgtMmI4ZC00YjU3LWIyZGEtNmRkNzI0Y2QyN2ExXkEyXkFqcGdeQXVyNzgzODI1OTE@._V1_Ratio0.6751_AL_.jpg"
+images: {imDbId: 'tt10323676', title: 'The Contractor', fullTitle: 'The Contractor (2022)', type: 'Movie', year: '2022', …}
+keywordList: (5) ['family', 'military', 'overseas', 'danger', 'survival']
+keywords: "family,military,overseas,danger,survival"
+languageList: [{…}]
+languages: "English"
+metacriticRating: "52"
+originalTitle: ""
+plot: "A discharged U.S. Special Forces sergeant, James Harper, risks everything for his family when he joins a private contracting organization."
+plotLocal: ""
+plotLocalIsRtl: false
+posters: null
+ratings: {imDbId: 'tt10323676', title: 'The Contractor', fullTitle: 'The Contractor (2022)', type: 'Movie', year: '2022', …}
+releaseDate: "2022-04-01"
+runtimeMins: "103"
+runtimeStr: "1h 43min"
+similars: (12) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
+starList: (3) [{…}, {…}, {…}]
+stars: "Chris Pine, Gillian Jacobs, Sander Thomas"
+tagline: null
+title: "The Contractor"
+trailer: {imDbId: 'tt10323676', title: 'The Contractor', fullTitle: 'The Contractor (2022)', type: 'Movie', year: '2022', …}
+tvEpisodeInfo: null
+tvSeriesInfo: null
+type: "Movie"
+wikipedia: null
+writerList: [{…}]
+writers: "J.P. Davis"
+year: "2022"
+
+trailer iFrame = <iframe src="https://www.imdb.com/video/loop-media/vi2179318297/imdb/embed?autoplay=false&width=480" width="480" height="270" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" frameborder="no" scrolling="no"></iframe>

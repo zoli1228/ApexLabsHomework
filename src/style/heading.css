@@ -1,0 +1,13 @@
+.Heading {
+    padding: 0 5%;
+    width: 90%;
+    font-size: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    min-width: 200px;
+
+  }
+  
