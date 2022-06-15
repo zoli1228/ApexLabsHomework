@@ -1,7 +1,7 @@
 import './style/App.css';
 import './style/movieList.css'
 import FetchMovies from './components/FetchMovies'
-
+import SimilarMovies from './components/SimilarMovies'
 import Heading from './components/Heading'
 import React from 'react';
 import { HeadingProvider, IMDbProvider, MoviesProvider, SimilarProvider, WikiInfoProvider, SearchBarProvider } from './Context';
@@ -35,7 +35,6 @@ function App() {
                       <FetchMovies />
                       <WikiDetails />
                     </div>
-                    {/* <Heading.SubHeading /> */}
                   </div >
                 </ApolloProvider>
               </SearchBarProvider>

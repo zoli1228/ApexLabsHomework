@@ -11,7 +11,7 @@
     color: white;
     min-width: 50px;
     max-width: 200px;
-    width: 15rem;
+    width: 100%;
 }
 
 .clearSearchBtn {
@@ -25,9 +25,9 @@
     border: none;
     border-radius: 20px;
     color: white;
-    min-width: 50px;
+    min-width: 100px;
     max-width: 200px;
-    width: 10rem;
+    width: 100%;
 }
 
 .clearSearchBtn:hover {

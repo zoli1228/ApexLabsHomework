@@ -1,35 +1,49 @@
 .card {
     cursor: pointer;
     user-select: none;
-    margin: 20px;
-    padding-bottom: 10px;
+    margin: 15px;
+    padding: 0 5px 10px 5px;
     background: #222;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    width: 130px;
-    height: 230px;
+    width: 10%;
+    min-width: 130px;
+    height: 250px;
+    border-radius: 5px;
     font-size: 12px;
-    transition: transform 50ms ease-in-out;
+    transition: transform 100ms ease-in-out, box-shadow 50ms;
     transform: scale(1);
+    box-sizing: border-box;
+    box-shadow: 0 0 25px rgba(0, 162, 255, 0.2);
 }
 .card:hover {
-    transform: scale(1.05)
+    transform: scale(1.05);
+    box-shadow: 0 0 5px 2px rgba(0, 162, 255, 0.6), 0 0 2px white;
+}
+@media screen and (max-width: 600px) {
+    .card:hover {
+        transform: inherit;
+        box-shadow: inherit;
+    }
 }
 .card > * {
     pointer-events: none;
 }
 
 .imgContainer {
-    width: inherit;
+    border-radius: inherit;
+    width: calc(100% + 10px);
+    min-width: 130px;
     overflow: hidden;
 
 }
 
 .imgContainer > img {
-    width: inherit;
+    width: 100%;
+    min-width: 130px;
     
 }
 

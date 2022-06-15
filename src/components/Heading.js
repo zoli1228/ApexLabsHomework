@@ -1,6 +1,6 @@
 
 import React, { useContext } from 'react';
-import { HeadingCtx, SubHeadingCtx } from '../Context';
+import { HeadingCtx } from '../Context';
 import SearchBar from './SearchBar';
 import '../style/heading.css'
 

@@ -15,3 +15,17 @@ html, body {
   overflow-y: auto;
 }
 
+.backHomeBtn {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  user-select: none;
+  background: #333;
+  justify-content: center;
+  overflow: hidden;
+  align-items: center;
+  display: flex;
+  width: 100%;
+  min-width: 100px;
+  height: inherit;
+}

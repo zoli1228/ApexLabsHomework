@@ -28,7 +28,7 @@ const SolveRating = (props) => {
 }
 
 const Card = (props) => {
-    const {setMovies} = useContext(MoviesCtx)
+    const {movies, setMovies} = useContext(MoviesCtx)
     const id = props.id
 
     return (

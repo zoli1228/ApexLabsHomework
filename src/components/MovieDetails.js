@@ -1,6 +1,6 @@
 import '../style/movieDetails.css'
 import Spinner from './Spinner'
-import { HeadingCtx, MoviesCtx, WikiInfoCtx, IMDbInfoCtx } from '../Context'
+import { HeadingCtx, MoviesCtx, WikiInfoCtx, IMDbInfoCtx, SimilarCtx } from '../Context'
 import { useContext } from 'react'
 import query from '../scripts/query'
 const noImage = "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/330px-No-Image-Placeholder.svg.png?20200912122019"
@@ -9,10 +9,11 @@ const MovieDetails = (props) => {
     const { wikiInfo, setWikiInfo } = useContext(WikiInfoCtx)
     const { imdbInfo, setImdbInfo } = useContext(IMDbInfoCtx)
     const { setHeading } = useContext(HeadingCtx)
-    const { setMovies } = useContext(MoviesCtx)
+    const { movies, setMovies } = useContext(MoviesCtx)
+    const { setSimilarMovies } = useContext(SimilarCtx)
     const movie = props.data
+
     if (movie) {
-        
         if (!wikiInfo.showInfo) {
             return (
                 <div className='movieDetails'>
@@ -26,6 +27,12 @@ const MovieDetails = (props) => {
                         <p>{movie.overview}</p>
                         <h3>Rating: {movie.score.toFixed(1)} </h3>
                         <div className='details-btncontainer'>
+                            {!movies.storedRelated ? <a onClick={async () => {
+                                setSimilarMovies(prevState => ({ ...prevState, showSimilar: true, searchTerm: movie.name, storedMovie: movie }))
+                                setMovies(prevState => ({...prevState, storedRelated: movies.selected, selected: "", }))
+                            }}>
+                                Related movies
+                            </a> : null}
                             <a onClick={() => {
                                 setWikiInfo(prevState => ({ ...prevState, isLoading: true }))
                                 fetch(query.wikipedia.getPageId(movie.name))
@@ -39,43 +46,47 @@ const MovieDetails = (props) => {
                                                 const wikiResponseObject = json.query.pages[Object.keys(json.query.pages)[0]]
                                                 const newObject = { ...wikiResponseObject, img: movie.img ? movie.img.url : noImage }
                                                 setWikiInfo(prevState => ({ ...prevState, showInfo: true, movieObject: newObject }))
-                                                setHeading(prevState => ({...prevState, mainHeading: "Wikipedia results for " + movie.name}))
-                                                
                                             })
-
-
                                     })
-                                    .catch((err) => {
+                                    .catch(() => {
                                         setWikiInfo(prevState => ({ ...prevState, isLoading: false }))
-                                        return alert("Error while gathering data from Wikipedia. ErrorMessage: " + err)
+                                        return alert("Error while getting Wiki info. Please try again later.")
                                     })
-                            }}>{wikiInfo.isLoading ? <Spinner /> : "Wikipedia"}</a>
+                            }}>
+                                {wikiInfo.isLoading ? <Spinner /> : "Wikipedia"}
+                            </a>
                             <a title="Link opens in a new window, you'll need to enable Pop-Ups." onClick={() => {
                                 setImdbInfo(prevState => ({ ...prevState, isLoading: true }))
                                 fetch(query.imdb.getPageId(movie.name))
                                     .then(response => response.json())
                                     .then(json => {
                                         const id = json.results[0].id
-                                        console.log(id)
                                         setImdbInfo(prevState => ({ ...prevState, isLoading: false }))
                                         window.open(`https://www.imdb.com/title/${id}`)
                                     })
-                                    .catch((err) => {
+                                    .catch(() => {
                                         setImdbInfo(prevState => ({ ...prevState, isLoading: false }))
-                                        return alert("Error while getting IMDb link. ErrorMessage: " + err)
+                                        return alert("Error while getting IMDb link. Please try again later.")
                                     })
-                            }}>{imdbInfo.isLoading ? <Spinner /> : "IMDb page"}</a>
+                            }}>
+                                {imdbInfo.isLoading ? <Spinner /> : "IMDb page"}
+                            </a>
                             <a onClick={() => {
                                 setWikiInfo(prevState => ({ ...prevState, showInfo: false }))
                                 setHeading(prevState => ({ ...prevState, mainHeading: "Now Trending" }))
                                 setMovies(prevState => ({ ...prevState, selected: "" }))
-                            }}>Back</a>
+                            }}>
+                                Back
+                            </a>
                         </div>
                     </div>
                 </div>
             )
         }
     }
+
+
+
 
 }
 

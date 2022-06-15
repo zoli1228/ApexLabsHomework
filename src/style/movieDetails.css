@@ -1,11 +1,11 @@
 .movieDetails {
-    width: calc(100% - 100px);
+    width: 90%;
     height: fit-content;
-    padding: 50px;
+    padding: 10px;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     background: #222;
     color: white;
     font-family: inherit;
@@ -15,29 +15,36 @@
 }
 
 .details-imgContainer {
-    width: 80%;
+    width: 60%;
     max-width: 400px;
-    min-width: 100px;
-    height: fit-content;
-    display: inline-block;
+    min-width: 300px;
+    height: auto;
+    display: flex;
+    justify-content: center;
 }
 
 .details-imgContainer>img {
     display: inherit;
     width: inherit;
-    height: inherit;
+    height: min-content;
 }
 
 .details-description {
-    text-align: justify;
+    text-align: left;
     font-weight: thin;
     letter-spacing: 0.1em;
-    line-height: 1.5em;
+    line-height: 2em;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     flex-direction: column;
     margin: 0;
-    width: 100%
+    width: 100%;
+    min-width: 300px;
+    max-width: 1000px;
+}
+.details-description > h1{
+    text-align: center;
+
 }
 
 .details-btncontainer {
@@ -60,9 +67,10 @@
     word-wrap: break-word;
     overflow: hidden;
     align-items: center;
+    border: 1px solid #222;
     display: flex;
     width: 100%;
-    min-width: 200px;
+    min-width: 100px;
     height: inherit;
 }
 

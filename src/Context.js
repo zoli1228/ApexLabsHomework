@@ -47,7 +47,7 @@ export const IMDbProvider = ({ children }) => {
 };
 
 export const HeadingProvider = ({ children }) => {
-    const [heading, setHeading] = useState({mainHeading: "Now Trending"});
+    const [heading, setHeading] = useState({mainHeading: "Trending Now"});
     return (
         <HeadingCtx.Provider value={{ heading, setHeading }}>
             {children}
@@ -70,7 +70,8 @@ export const MoviesProvider = ({ children }) => {
         search: false, 
         listCount: 20,
         movieObject: {},
-        selected: ""
+        selected: "",
+        storedRelated: false
     });
     return (
         <MoviesCtx.Provider value={{ movies, setMovies }}>
@@ -80,7 +81,13 @@ export const MoviesProvider = ({ children }) => {
 }
 
 export const SimilarProvider = ({ children }) => {
-    const [similarMovies, setSimilarMovies] = useState({});
+    const [similarMovies, setSimilarMovies] = useState({
+        storedMovie: {},
+        showSimilar: false,
+        searchTerm: "",
+        foundSimilar: false,
+        movies: null
+    });
     return (
         <SimilarCtx.Provider value={{ similarMovies, setSimilarMovies }}>
             {children}

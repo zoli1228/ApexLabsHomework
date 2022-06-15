@@ -64,7 +64,7 @@ const query = {
   },
   imdb: {
     getPageId: (term) => {return `https://imdb-api.com/en/API/SearchMovie/k_39p91136/${term}`},
-    getLinkById: (id) => {return `https://imdb-api.com/en/API/ExternalSites/k_39p91136/${id}`}
+    getLinkById: (id) => {return `https://imdb-api.com/en/API/ExternalSites/k_39p91136/${id}/`}
 
   }
 }
